@@ -13,9 +13,9 @@ void dfs(int u)
     for (auto i : v[u])
         if (!B[i])
         {
+            
             dfs(i);
             tab[u] += tab[i];
-            
         }
 
 }
