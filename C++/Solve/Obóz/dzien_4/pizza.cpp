@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include <unordered_set>
+//#include <unordered_set>
 using namespace std;
 int n, w = 1; //lewy wsakżnik pizzy
 int piz[1000002];
