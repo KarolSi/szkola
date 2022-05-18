@@ -14,7 +14,7 @@ void dfs(int u)
     for (auto i : v[u])
         if (!B[i])
         {
-            dfs(i);    
+            dfs(i);      
         }
     tab[u].second = stopper; stopper++;
 
