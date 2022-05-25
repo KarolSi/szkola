@@ -1,3 +1,5 @@
+//Zrobione essa 
+
 #include <bits/stdc++.h>
 using namespace std;
 const long long END = 1e6+100;
