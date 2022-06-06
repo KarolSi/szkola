@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-long long n,q,m,x, z,res,a,b,w;
-const long long p = 1<<20;
-long long t[p*2];
+int n,p,w, wynik=0;
+int t[1000002];
 
 void update (long long  x, long long y)
 {
@@ -30,29 +28,17 @@ long long add (long long x, long long y)
     return res;
 }
 
+
 int main()
 {
     ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
-    cin>>n>>q;
-    for (long long  i = 1; i <= n; i++)
+    cin>>n;
+    for (int i = 1; i <=n; i++)
     {
         cin>>w;
-        update(i, w);
+        update(i,w);
     }
-    for (long long i = 0; i < q; i++)
-    {
-        cin>>z;
-        if(z==1)
-        {
-            cin>>a>>b;
-            update(a,b);
-        }
-        else
-        {
-            cin>>a>>b;
-            cout<<add(a,b)<<"\n";
-        }
-    }
+    cout<<add();
     
     return 0;
 }

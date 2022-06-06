@@ -10,7 +10,7 @@ void update (long long  x, long long y)
     x+=p, t[x] = y, x/=2;
     while(x!=0)
     {
-        t[x] = t[2*x] + t[x*2+1];
+        t[x] =min(res, t[2*x] + t[x*2+1]);
         x /= 2;
     }
 }
@@ -23,8 +23,8 @@ long long add (long long x, long long y)
         return t[x];
     while (x/2!=y/2)
     {
-        if(x%2==0) res+=t[x+1];
-        if(y%2==1) res+=t[y-1];
+        if(x%2==0) res=min(res,t[x+1]);
+        if(y%2==1) res=min(res,t[y-1]);
         x/=2,y/=2;
     }
     return res;
