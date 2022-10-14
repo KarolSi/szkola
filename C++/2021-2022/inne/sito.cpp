@@ -28,7 +28,7 @@ int main()
 	for(int i=0;i<pierwsze.size();i++)
 	{
 		if(pierwsze[i]>n)
-		{cout<<i;
+		{cout<<pierwsze[i-1];
 		break;
 		}
 	}
