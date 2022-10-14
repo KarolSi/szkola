@@ -11,12 +11,9 @@ int main()
     cin>>l;
 
     for (long long i = 0; i<l; i++ )
-    {
         cin>>tabd[i];
-    //    cout<<tabd[i]<<"  ";
-    }
+
     sort(tabd, tabd+l);
-    //cout<<tabd[l-1];
     
     cout<<tabd[l-1]*tabd[0];
 }
