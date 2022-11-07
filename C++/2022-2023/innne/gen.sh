@@ -1,9 +1,9 @@
-for ((i=1;i<=100;i++))
+for ((i=1;i<=10;i++))
 do 
-	python3 rand.py > test.in
-	./burt < test.in > brut.out
-	./wzor < test.in > wzor.out
-	diff -b brut.out wzor.out
+	python3 rand.py > $i.in
+	./burt < $i.in > $i+brut.out
+	./wzor < $i.in > $i+wzor.out
+	diff -b $i+brut.out $i+wzor.out
 
 done
 
