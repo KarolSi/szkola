@@ -5,12 +5,13 @@ int main()
 {
     ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
     int wynik;
-    string s;
-    cin>>s;
-    for (int i = 0; i < s.size(); i++)
+    int n;
+    cin>>n;
+    while(n>0)
     {
-        wynik+=s[i]-48;
+        wynik+=n%10;
+        n/=10;
     }
-    cout<<wynik;
+    cout<<wynik<<"\n";
     return 0;
 }

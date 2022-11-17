@@ -1,10 +1,11 @@
-bool B[];
-void dfs(int u)
+#include <iostream>
+using namespace std;
+string gh;
+int res;
+int main ()
 {
-    B[u] = true;
-    //tab[u].first = stopper; stopper++;
-    for (auto i : v[u])
-        if (!B[i])
-            dfs(i);
-    //tab[u].second = stopper; stopper++;
+    cin>>gh;
+    cout<<gh<<"\n";
+    for(int i=0;i<gh.size();i++)    res += gh[i]-48;
+    cout<<res;
 }
