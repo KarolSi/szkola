@@ -1,17 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+int n; 
+int wynik = 0;
 int main()
 {
     ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
-    int wynik=0;
-    int n;
     cin>>n;
-    while(n>0)
+    if (n==0)
     {
-        wynik+=n%10;
-        n/=10;
+        cout<<1;
+        return 0;
     }
-    cout<<wynik<<"\n";
-    
+    while(n!=0)
+    {
+        n/=10;
+        wynik++;
+    }
+    cout<<wynik;
+    return 0;
 }
