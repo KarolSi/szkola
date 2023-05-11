@@ -1,28 +1,31 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n,m,w;
-int wynik;
+int n,w=1;
 
-int main()
+
+int suma_cyfr(int m) 
 {
-    ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
-    cin>>n;
-    while (n>0)
-    {
-        m = n;
+    int wynik = 0;
         while(m>0)
         {
             wynik+=m%10;
             m/=10;
         }
+    return wynik;
         
-        n = wynik;
-        w = wynik;
-        wynik = 0;
+}
 
-
+int main()
+{
+    ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+    cin>>n;
+    
+    while (n>9)
+    {
+        n = suma_cyfr(n);
+        w++;
     }
-    cout<<w;
+    cout<<n;
     
     return 0;
 }
